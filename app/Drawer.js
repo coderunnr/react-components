@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Image, Button } from 'react-native';
+import { Image, Button, View } from 'react-native';
 
 import { DrawerNavigator } from 'react-navigation';
 
@@ -14,10 +14,16 @@ class HomeScreen extends React.Component {
 
     render() {
         return(
+            <View style = {{ flex: 1, justifyContent: 'space-evenly' , alignItems: 'center'}}>
             <Button
                 onPress = { () => this.props.navigation.navigate('Notifications')}
                 title = "Go To Notifications"
             />
+            <Button
+                onPress = { () => this.props.navigation.navigate('Home')}
+                title = "Go Back"
+            />
+            </View>
         );
     } 
 }
@@ -29,10 +35,16 @@ class NotificationScreen extends React.Component {
 
     render() {
         return(
+            <View style = {{ flex: 1, justifyContent: 'space-evenly' , alignItems: 'center'}}>
             <Button
                 onPress = { () => this.props.navigation.goBack()}
                 title = "Go Back Home"
             />
+            <Button
+                onPress = { () => this.props.navigation.navigate('Home')}
+                title = "Go Back"
+            />
+            </View>
         );
     }
 }
