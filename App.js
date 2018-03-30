@@ -6,6 +6,7 @@ import DetailsScreen from './app/Details';
 import ModalScreen from './app/ModalScreen';
 import TabNavigator from './app/Tab';
 import DrawerNav from './app/Drawer';
+import Authentication from './app/Authentication';
 
 const MainStack = StackNavigator (
   {
@@ -20,7 +21,10 @@ const MainStack = StackNavigator (
     },
     DrawerNav: {
       screen: DrawerNav,
-    }
+    },
+    Authentication: {
+      screen: Authentication,
+    },
   },
   {
     initialRouteName: 'Home',
