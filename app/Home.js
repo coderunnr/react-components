@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {View, Text, Button} from 'react-native';
+import { View, Text, Button } from 'react-native';
 
 export default class HomeScreen extends React.Component {
 
@@ -20,8 +20,8 @@ export default class HomeScreen extends React.Component {
           <View style={{ flex: 1, alignItems: 'center', justifyContent: 'space-evenly' }}>
             <Text>Home Screen</Text>
             <Button
-                title="Go to Details"
-                onPress={() => {
+                title = "Go to Details"
+                onPress = {() => {
                     this.props.navigation.navigate('Details', {
                         itemId: 86,
                         screenTitle: 'Title',
@@ -29,8 +29,8 @@ export default class HomeScreen extends React.Component {
                 }}
             />
             <Button
-                title="Open Tabs"
-                onPress={() => this.props.navigation.navigate('Tab')}
+                title = "Open Tabs"
+                onPress = {() => this.props.navigation.navigate('Tab')}
             />
             <Button
                 title = "Go to Drawer"
@@ -39,10 +39,14 @@ export default class HomeScreen extends React.Component {
                 }}
             />
             <Button
-                title="Open SignIn"
-                onPress={() => this.props.navigation.navigate('Authentication')}
+                title = "Open SignIn"
+                onPress = {() => this.props.navigation.navigate('Authentication')}
             />
-          </View>
+            <Button
+                title = "Open Layout Animation"
+                onPress = {() => this.props.navigation.navigate('AnimationLayout')}
+            />
+            </View>
         );
       }
     }

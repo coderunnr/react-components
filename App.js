@@ -5,6 +5,7 @@ import HomeScreen from './app/Home';
 import DetailsScreen from './app/Details';
 import ModalScreen from './app/ModalScreen';
 import TabNavigator from './app/Tab';
+import AnimationLayout from './app/AnimationLayout';
 import DrawerNav from './app/Drawer';
 import Authentication from './app/Authentication';
 
@@ -25,6 +26,9 @@ const MainStack = StackNavigator (
     Authentication: {
       screen: Authentication,
     },
+    AnimationLayout: {
+      screen: AnimationLayout,
+    }
   },
   {
     initialRouteName: 'Home',
